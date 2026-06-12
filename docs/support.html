@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>にゃんご飯 サポートページ</title>
+  <meta name="description" content="にゃんご飯のサポートページです。">
+  <style>
+    :root {
+      --bg: #fff8f6;
+      --card: rgba(255,255,255,0.94);
+      --line: #f0d7d9;
+      --text: #402c2b;
+      --sub: #7c6668;
+      --accent: #ef6987;
+      --accent-strong: #de4f72;
+      --shadow: 0 24px 60px rgba(239, 105, 135, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #fff, #ffeef2 35%, transparent 65%),
+        linear-gradient(180deg, #fff, var(--bg));
+    }
+
+    .wrap {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 72px;
+    }
+
+    .nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-strong);
+      text-decoration: none;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(32px, 5vw, 48px);
+    }
+
+    .lead {
+      margin: 0 0 28px;
+      color: var(--sub);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+
+    .card p, .card li {
+      color: var(--sub);
+      line-height: 1.85;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      font-weight: 700;
+    }
+
+    .faq-item + .faq-item {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-q {
+      margin: 0 0 6px;
+      color: var(--accent-strong);
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 26px;
+      font-size: 14px;
+      color: var(--sub);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="nav" href="./index.html">← トップへ戻る</a>
+    <h1>サポートページ</h1>
+    <p class="lead">
+      「にゃんご飯」をご利用いただきありがとうございます。
+      アプリの使い方や購入復元に関する案内、お問い合わせ先を掲載しています。
+    </p>
+
+    <section class="stack">
+      <article class="card">
+        <h2>アプリについて</h2>
+        <p>
+          にゃんご飯は、猫の体重・年齢・避妊去勢状況とフードのカロリー情報から、
+          1日に与えるご飯の適正量の目安を計算するアプリです。
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>よくある質問</h2>
+        <div class="faq-item">
+          <p class="faq-q">Q. 購入を復元するには？</p>
+          <p>アプリ内の設定画面からプレミアム画面を開き、「購入を復元する」をお試しください。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Q. 計算結果は絶対に正しいですか？</p>
+          <p>本アプリの計算結果は目安です。猫の体調や活動量によって適正量は変わるため、必要に応じて獣医師へご相談ください。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Q. データはどこに保存されますか？</p>
+          <p>登録した猫情報、フード情報、履歴はお使いの端末内に保存されます。</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>お問い合わせ</h2>
+        <div class="contact">
+          <div>
+            <p style="margin:0 0 6px; color:var(--text); font-weight:700;">メールでお問い合わせ</p>
+            <p style="margin:0;">support@nyangohan.app</p>
+          </div>
+          <a class="button" href="mailto:support@nyangohan.app">メールを送る</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>ご利用上の注意</h2>
+        <ul>
+          <li>本アプリは健康管理の補助を目的としたものであり、診断や治療を行うものではありません。</li>
+          <li>子猫、妊娠・授乳期、高齢猫、持病のある猫では特に個別判断が必要です。</li>
+          <li>体重変化や体調不良が見られる場合は、獣医師へご相談ください。</li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="footer">最終更新日: 2026年6月13日</p>
+  </main>
+</body>
+</html>
